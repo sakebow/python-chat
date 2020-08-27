@@ -21,12 +21,14 @@ def test():
     csocket.send(msg.encode(SOCKET_CONFIG.SOCKET_CHARSET_ENCODING.value))
     recv_data = csocket.recv(SOCKET_CONFIG.SOCKET_MAX_CACHE.value)
     print(recv_data.decode(SOCKET_CONFIG.SOCKET_CHARSET_ENCODING.value))
+  # close util all done, not the time when message arrives server
   csocket.close()
   pass
 
 if __name__ == "__main__":
   # test util - package object to json
   # print(Utils.RESPONSE_LOGIN_RESULT(True, 'nick', 'user'))
-  # test('haha')
+  
+  # test client - see if clients and server run correctly
   test()
   pass

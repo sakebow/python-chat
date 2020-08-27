@@ -10,13 +10,16 @@ class PROTOCOL_FLAG(Enum):
   pass
 
 '''
-config about server
+server configurations
 '''
 class SERVER_CONFIG(Enum):
   SERVER_IP = '192.168.1.111'
   SERVER_PORT = 2080
   pass
 
+'''
+socket configurations
+'''
 class SOCKET_CONFIG(Enum):
   SOCKET_MAX_CACHE = 1232896
   SOCKET_CHARSET_ENCODING = 'utf-8'

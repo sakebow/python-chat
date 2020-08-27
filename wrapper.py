@@ -1,6 +1,9 @@
 from config import *
 import socket
 
+'''
+package socket
+'''
 class SocketWrapper:
   def __init__(self, soc):
     self.soc = soc

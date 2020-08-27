@@ -44,7 +44,11 @@ class Server:
       # soc.close()
       pass
     pass
-
+  
+  '''
+  1 - if there's message from client, run *socket.send* and *socket.recv*
+  2 - if client is offline, close socket and release resources
+  '''
   def request_handler(self, client_soc):
     while True:
       msg = client_soc.recv_data()
