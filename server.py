@@ -1,8 +1,11 @@
 from ssocket import ServerSocket
 from config import *
 from wrapper import *
-import socket
+from utils import *
+
 from threading import Thread
+
+import socket
 '''
 main functions of server
 '''
@@ -52,11 +55,7 @@ class Server:
   def request_handler(self, client_soc):
     while True:
       msg = client_soc.recv_data()
-      print(msg) # test if server process is called
       client_soc.send_data(f'connection established! return value: {msg}')
-      if not msg:
-        client_soc.soc.close()
-        pass
       pass
     pass
   pass
